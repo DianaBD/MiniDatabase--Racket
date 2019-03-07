@@ -1,0 +1,35 @@
+
+
+Brodoceanu Diana 322 CC
+									   ->->->  Tema1 PP  <-<-<-
+
+           ==================================== README  =======================================
+
+
+
+      >> Reprezentare baza de date <<
+
+            - am folosit cate o structura pentru fiecare element al bazei de date
+                  (struct column ( name values )), unde values = lista valori
+                  (struct tabela ( name columns )), unde columns = lista de coloane
+                  (struct database ( tables )), unde tables = lista de tabela
+
+            De exemplu, pentru tabelul din schelet:
+
+                pentru coloana Prenume:    (column "Prenume" '("Gigel" "Maria" "Ionel" "Ioana"))
+
+                pentru tabelul Studenți:    (tabela "Studenti" '(#column #column #column #column #column))
+
+                pentru baza de date db:     (database '(#tabela #tabela))
+
+
+      >> Observatii <<
+
+            - pentru natural-join ordinea liniilor din tabel difera fata de rezultatele din test
+            din cauza ca in cadrul rezolvarii am sortat coloana pe baza careia se face join. Am avut
+            nevoie de sortare pentru a putea aplica cartesian-product pe bucatelele dorite de 
+            linii din fiecare tabel, grupate dupa valoarea coloanei de join
+            - difera si ordinea coloanelor fata de cele din test, insa daca se pun intr-un tabel,
+            asocierile sunt ok :P
+
+
